@@ -5,7 +5,9 @@ The activity was indicative of potential Cross-Site Scripting (XSS) attempts, ba
 ## 1. Alert / Detection Source
 
 ## 2. Initial Analyst Hypothesis
+Based on the presence of script-based payloads within URL parameters, the initial hypothesis was that an attacker was attempting to execute a reflected Cross-Site Scripting (XSS) attack.
 
+At this stage, it was unknown whether the payloads were successfully executed by the client or merely reflected in server responses without execution.
 ## 3. Log Sources Reviewed
 
 ## 4. Step-by-Step Investigation
