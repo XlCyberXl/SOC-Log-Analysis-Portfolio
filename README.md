@@ -1,2 +1,51 @@
-# SOC-Log-Analysis-Portfolio
-Hands-on SOC and Incident Response log analysis investigations, including web attacks, authentication abuse, and SIEM alerts.
+# SOC Log Analysis Portfolio
+
+## Overview
+This repository contains hands-on SOC and Incident Response log analysis investigations focused on identifying, validating, and documenting real-world attack techniques using web server logs and SIEM data.
+
+Each project follows a structured SOC workflow:
+- Alert or detection review
+- Evidence-based log analysis
+- Determination of attack success or failure
+- Clear, defensible conclusions
+- Security recommendations
+
+All investigations are documented step-by-step, with each step mapped to supporting evidence and screenshots.
+
+---
+
+## Analyst Background
+I currently work in technical support and am transitioning into a SOC / Information Security role.
+
+I have hands-on experience analyzing:
+- Web server access logs
+- Authentication and login activity
+- SIEM alerts related to web exploitation and abuse patterns
+
+My investigation style emphasizes:
+- Strict step-by-step analysis
+- Evidence-driven conclusions
+- Clear differentiation between attempted and successful exploitation
+
+---
+
+## Investigation Projects
+
+01. Command Injection – SIEM Alert Investigation  
+02. IDOR (Insecure Direct Object Reference) Log Analysis  
+03. LFI / RFI SIEM Alert Investigation  
+04. Open Redirect Log Analysis  
+05. Directory Traversal Log Analysis  
+06. Brute Force Attack Log Analysis  
+07. XML External Entity (XXE) Log Analysis  
+08. Cross-Site Scripting (XSS) Log Analysis  
+09. SQL Injection (SQLi) Log Analysis  
+
+---
+
+## How to Use This Repository
+Each project is contained in its own folder and includes:
+- A detailed README documenting the investigation
+- Step-by-step analysis mapped to screenshots
+- Evidence supporting conclusions
+- Mitigation and security recommendations
