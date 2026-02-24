@@ -14,13 +14,13 @@ At this stage, it was unknown whether the payloads were successfully executed by
 1. Reviewed Apache web server access logs to identify the initial occurrence of suspicious URL parameters indicative of Cross-Site Scripting (XSS) activity.
 
    During log review, I identified a request containing keywords such as `alert` and `script`, which are commonly associated with XSS payloads. Based on this log entry, the attack start time was identified as 01/Mar/2022:08:53:20.
-
+(Screenshot: screenshots/step-1-access-logs.png)
 2. Analyzed the same Apache access log entry to identify the source IP address responsible for the malicious request.
-
+(Screenshot: screenshots/step-2-filtered-requests.png)
    The source IP address associated with the XSS payload was identified as 192.168.31.183. This IP address was consistently observed in requests containing the malicious script content.
 
 3. Evaluated HTTP response codes returned by the server to determine whether the XSS payload was successfully processed.
-
+(Screenshot: screenshots/step-3-payload.png
    The server consistently returned HTTP 200 OK responses for requests containing the malicious payload. No defensive indicators were observed, including the absence of 400-series client errors, 403 Forbidden responses, WAF block messages, redirects, or server-side error responses. This indicated that the server processed the malicious request without blocking or sanitization.
 
 4. Analyzed request and response behavior to classify the type of Cross-Site Scripting (XSS) attack observed.
