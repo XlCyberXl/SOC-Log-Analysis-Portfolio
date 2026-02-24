@@ -32,5 +32,8 @@ Payload was reflected
 HTTP 200 responses observed
 No sanitization detected
 ## 6. Conclusion
+This investigation confirmed a successful reflected XSS attack identified through Apache access log analysis, including clear indicators of exploitation timing, attacker IP address, and attack classification.
 
 ## 7. Mitigation & Recommendations
+Input validation
+WAF rules
