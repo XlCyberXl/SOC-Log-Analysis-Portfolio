@@ -45,14 +45,22 @@ My investigation style emphasizes:
 
 ## Investigation Projects
 
-01. Command Injection – SIEM Alert Investigation  
+### [1. Command Injection – High SIEM Alert](./01-Command-Injection/)
+
+**Type:** Web Application Attack Investigation  
+**Logs Analyzed:** Apache Access Logs  
+**Skills Demonstrated:** Log Analysis, Command Injection Investigation
 02. IDOR (Insecure Direct Object Reference) Log Analysis  
 03. LFI / RFI SIEM Alert Investigation  
 04. Open Redirect Log Analysis  
 05. Directory Traversal Log Analysis  
 06. Brute Force Attack Log Analysis  
 07. XML External Entity (XXE) Log Analysis  
-08. Cross-Site Scripting (XSS) Log Analysis  
+### [8. Cross-Site Scripting (XSS) Log Analysis](./08-XSS-Log-Analysis/)
+
+**Type:** Web Application Attack Investigation  
+**Logs Analyzed:** Apache Access Logs  
+**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response 
 09. SQL Injection (SQLi) Log Analysis  
 
 ---
