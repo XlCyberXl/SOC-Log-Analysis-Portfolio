@@ -28,7 +28,9 @@ At this stage, it was unknown whether the payloads were successfully executed by
    The malicious payload was present directly within the URL parameters and was processed by the server, which ruled out Stored XSS due to the absence of persistence mechanisms such as database writes or form submissions. The lack of client-side-only execution or DOM manipulation ruled out DOM-based XSS. Based on these indicators, the attack was classified as a Reflected Cross-Site Scripting (XSS) attempt.
 
 ## 5. Evidence of Exploitation
-
+Payload was reflected
+HTTP 200 responses observed
+No sanitization detected
 ## 6. Conclusion
 
 ## 7. Mitigation & Recommendations
