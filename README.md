@@ -1,19 +1,5 @@
 # Da'Shayne's Portfolio of Cybersecurity Projects
-## 🔍 Security Projects
 
-### 1. Command Injection – High SIEM Alert
-**Type:** Web Application Attack Investigation  
-**Logs Analyzed:** Apache Access Logs  
-**Skills Demonstrated:** Log Analysis, Command Injection Investigation  
-
-➡️ [View Project](./01-Command-Injection/)
-
-### 8. Cross-Site Scripting (XSS) Log Analysis
-**Type:** Web Application Attack Investigation  
-**Logs Analyzed:** Apache Access Logs  
-**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response  
-
-➡️ [View Project](./08-XSS-Log-Analysis/)
 ## Overview
 This repository contains hands-on SOC and Incident Response log analysis investigations focused on identifying, validating, and documenting real-world attack techniques using web server logs and SIEM data.
 
