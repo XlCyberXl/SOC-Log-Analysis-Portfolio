@@ -1,6 +1,5 @@
 # Da'Shayne's Portfolio of Cybersecurity Projects
 ## 🔍 Security Projects
-## 🔍 Security Projects
 
 ### 1. Command Injection – High SIEM Alert
 **Type:** Web Application Attack Investigation  
