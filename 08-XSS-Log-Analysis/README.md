@@ -1,3 +1,12 @@
+## 🔍 Security Projects
+
+### 1. Cross-Site Scripting (XSS) Log Analysis
+**Type:** Web Application Attack Investigation  
+**Logs Analyzed:** Apache Access Logs  
+**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response  
+
+➡️ [View Project](./08-XSS-Log-Analysis/)
+
 # Cross-Site Scripting (XSS) Log Analysis
 
 ## 1. Alert / Detection Source
