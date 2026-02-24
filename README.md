@@ -14,7 +14,6 @@
 **Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response  
 
 ➡️ [View Project](./08-XSS-Log-Analysis/)
-➡️ [View Project](./08-XSS-Log-Analysis/)
 ## Overview
 This repository contains hands-on SOC and Incident Response log analysis investigations focused on identifying, validating, and documenting real-world attack techniques using web server logs and SIEM data.
 
