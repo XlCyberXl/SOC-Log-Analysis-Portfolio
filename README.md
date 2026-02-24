@@ -1,4 +1,4 @@
-# SOC Log Analysis Portfolio
+# Da'Shayne's Portfolio of Cybersecurity Projects
 ## 🔍 Security Projects
 
 ### 1. Cross-Site Scripting (XSS) Log Analysis
