@@ -9,7 +9,7 @@ Based on the presence of script-based payloads within URL parameters, the initia
 
 At this stage, it was unknown whether the payloads were successfully executed by the client or merely reflected in server responses without execution.
 ## 3. Log Sources Reviewed
-
+- Web server access logs
 ## 4. Step-by-Step Investigation
 
 ## 5. Evidence of Exploitation
