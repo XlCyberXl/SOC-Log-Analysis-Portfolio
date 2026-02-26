@@ -37,7 +37,11 @@ My investigation style emphasizes:
 **Logs Analyzed:** Apache Access Logs  
 **Skills Demonstrated:** Log Analysis, Command Injection Investigation
 ### [2. IDOR (Insecure Direct Object Reference) Log Analysis](./02-IDOR-Log-Analysis/) 
-03. LFI / RFI SIEM Alert Investigation  
+### [3. LFI / RFI – SIEM Alert Investigation](./03-LFI-RFI-SIEM-Alert/)
+**Type:** SIEM Alert Triage & Validation  
+**Data Reviewed:** SIEM Alerts, Web Traffic  
+**Skills Demonstrated:** Alert Analysis, False Positive Validation  
+ 
 04. Open Redirect Log Analysis  
 05. Directory Traversal Log Analysis  
 06. Brute Force Attack Log Analysis  
