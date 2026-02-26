@@ -36,7 +36,10 @@ My investigation style emphasizes:
 **Type:** Web Application Attack Investigation  
 **Logs Analyzed:** Apache Access Logs  
 **Skills Demonstrated:** Log Analysis, Command Injection Investigation
-### [2. IDOR (Insecure Direct Object Reference) Log Analysis](./02-IDOR-Log-Analysis/) 
+### 2. IDOR (Insecure Direct Object Reference) Log Analysis
+Type: Web Application Authorization Vulnerability Analysis  
+Logs Analyzed: Web Server Access Logs  
+Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection  
 ### [3. LFI / RFI – SIEM Alert Investigation](./03-LFI-RFI-SIEM-Alert/)
 **Type:** SIEM Alert Triage & Validation  
 **Data Reviewed:** SIEM Alerts, Web Traffic  
