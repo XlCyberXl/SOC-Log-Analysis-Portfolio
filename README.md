@@ -45,7 +45,10 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Data Reviewed:** SIEM Alerts, Web Traffic  
 **Skills Demonstrated:** Alert Analysis, False Positive Validation  
  
-04. Open Redirect Log Analysis  
+### [4. Open Redirect Log Analysis](./04-Open-Redirect-Log-Analysis/)
+**Type:** Web Application Vulnerability Analysis  
+**Logs Analyzed:** Web Server Access Logs  
+**Skills Demonstrated:** Redirect Abuse Detection, Log Correlation
 05. Directory Traversal Log Analysis  
 06. Brute Force Attack Log Analysis  
 07. XML External Entity (XXE) Log Analysis  
