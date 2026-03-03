@@ -49,7 +49,10 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Type:** Web Application Vulnerability Analysis  
 **Logs Analyzed:** Web Server Access Logs  
 **Skills Demonstrated:** Redirect Abuse Detection, Log Correlation
-05. Directory Traversal Log Analysis  
+### [5. Directory Traversal Log Analysis](./05-Directory-Traversal-Log-Analysis/)
+**Type:** Web Attack Log Analysis  
+**Logs Analyzed:** Web Server Access Logs  
+**Skills Demonstrated:** Path Traversal Detection, HTTP Log Analysis, Exploitation Validation 
 ### [6. Brute Force Attack Log Analysis](./06-Brute-Force-Attack-Log-Analysis/)
 **Type:** Authentication Log Analysis  
 **Logs Analyzed:** Authentication & Web Server Access Logs  
