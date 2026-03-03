@@ -57,7 +57,10 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Type:** Authentication Log Analysis  
 **Logs Analyzed:** Authentication & Web Server Access Logs  
 **Skills Demonstrated:** Brute Force Detection, Login Pattern Analysis, HTTP Response Interpretation 
-07. XML External Entity (XXE) Log Analysis  
+### [7. XML External Entity (XXE) Log Analysis](./07-XML-External-Entity-XXE-Log-Analysis/)
+**Type:** Web Application Log Analysis  
+**Logs Analyzed:** Web Server & Application Logs  
+**Skills Demonstrated:** XML Payload Analysis, Exploit Detection, Application Log Review 
 ### [8. Cross-Site Scripting (XSS) Log Analysis](./08-XSS-Log-Analysis/)
 
 **Type:** Web Application Attack Investigation  
