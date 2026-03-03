@@ -50,7 +50,10 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Logs Analyzed:** Web Server Access Logs  
 **Skills Demonstrated:** Redirect Abuse Detection, Log Correlation
 05. Directory Traversal Log Analysis  
-06. Brute Force Attack Log Analysis  
+### [6. Brute Force Attack Log Analysis](./06-Brute-Force-Attack-Log-Analysis/)
+**Type:** Authentication Log Analysis  
+**Logs Analyzed:** Authentication & Web Server Access Logs  
+**Skills Demonstrated:** Brute Force Detection, Login Pattern Analysis, HTTP Response Interpretation 
 07. XML External Entity (XXE) Log Analysis  
 ### [8. Cross-Site Scripting (XSS) Log Analysis](./08-XSS-Log-Analysis/)
 
