@@ -25,9 +25,9 @@ At this stage, it was unknown whether the alert reflected a true attack or a fal
 1. **Received and acknowledged the SIEM alert**  
    Took ownership of the case and began the investigation.
 
-![Step 1](../images/command_injection-ss1.png)
+![Step 1](../images_ss/command_injection-ss1.png)
 
-![Step 1.1](../images/command_injection-ss1.1.png)
+![Step 1](../images_ss/command_injection-ss1.1.png)
 
 2. **Log analysis using source IP and alert time**  
    - Reviewed logs using the source IP and alert timestamp (Feb 27, 2022, 12:36 AM)  
@@ -37,26 +37,26 @@ At this stage, it was unknown whether the alert reflected a true attack or a fal
    - Comparison with other requests from the same IP confirmed normal browsing behavior  
    - No suspicious or malicious activity observed
 
-![Step 2](images/command_injection-ss2.png)
+![Step 1](../images_ss/command_injection-ss2.png)
 
-![Step 2.1](images/command_injection-ss2.1.png)
+![Step 1](../images_ss/command_injection-ss2.1.png)
 
 3. **IP reputation and ownership analysis**  
    - VirusTotal score: 0  
    - IP ownership: Private / Reserved IP address  
    - No known malicious reputation
 
-![Step 3](images/command_injection-ss3.png)
+![Step 1](../images_ss/command_injection-ss3.png)
 
-![Step 3.1](images/command_injection-ss3.1.png)
+![Step 1](../images_ss/command_injection-ss3.1.png)
 
 4. **Checked for authorized testing**  
    - Reviewed Email Security mailbox for planned tests involving the source or destination IP  
    - No emails indicating authorized testing found
 
-![Step 4](images/command_injection-ss4.png)
+![Step 1](../images_ss/command_injection-ss4.png)
 
-![Step 4.1](images/command_injection-ss4.1.png)
+![Step 1](../images_ss/command_injection-ss4.1.png)
 
 5. **SIEM playbook execution and validation**  
    - Initiated SIEM playbook and documented findings  
@@ -67,23 +67,23 @@ At this stage, it was unknown whether the alert reflected a true attack or a fal
      - Endpoint logs showed no commands executed on the host  
      - No malicious activity detected
 
-![Step 5](images/command_injection-ss5.png)
+![Step 1](../images_ss/command_injection-ss5.png)
 
 6. **Traffic validation**  
    - Reviewed additional traffic from this IP  
    - Confirmed other activity was present, but none was malicious
 
-![Step 6](images/command_injection-ss6.png)
+![Step 1](../images_ss/command_injection-ss6.png)
 
 7. **Incident closure**  
    - Entered final analyst comments in SIEM  
    - Closed the case
 
-![Step 7](images/command_injection-ss7.png)
+![Step 1](../images_ss/command_injection-ss7.png)
 
-![Step 7.1](images/command_injection-ss7.1.png)
+![Step 1](../images_ss/command_injection-ss7.1.png)
 
-![Step 7.2](images/command_injection-ss7.2.png)
+![Step 1](../images_ss/command_injection-ss7.2.png)
 
 ---
 
