@@ -66,7 +66,11 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Type:** Web Application Attack Investigation  
 **Logs Analyzed:** Apache Access Logs  
 **Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response 
-09. SQL Injection (SQLi) Log Analysis  
+### [9. SQL Injection (SQLi) – SIEM Alert Investigation](./09-SQL-Injection-SIEM-Alert/)
+
+**Type:** SIEM Alert Triage & Validation  
+**Data Reviewed:** SIEM Alerts, Apache Access Logs  
+**Skills Demonstrated:** Alert Analysis, SQL Injection Detection, Log Correlation 
 
 ---
 
