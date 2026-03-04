@@ -25,7 +25,7 @@ At this stage, it was unknown whether the alert reflected a true attack or a fal
 1. **Received and acknowledged the SIEM alert**  
    Took ownership of the case and began the investigation.
 
-![Step 1](images/command_injection-ss1.png)
+![Step 1](../images/command_injection-ss1.png)
 
 ![Step 1.1](../images/command_injection-ss1.1.png)
 
