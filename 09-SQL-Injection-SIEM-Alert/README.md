@@ -21,7 +21,7 @@ The alert indicated potential SQL injection attempts targeting a web application
 
 1. Reviewed the SIEM rule that triggered the alert to understand detection logic.
 
-![SIEM Alert Trigger](images/sql-step1-siem-alert.png)
+![SIEM Alert Trigger](images/sql-step1.png)
 
 *Figure 1: SQL injection detection rule triggered in SIEM.*
 2. Identified HTTP requests containing SQL injection patterns such as:
