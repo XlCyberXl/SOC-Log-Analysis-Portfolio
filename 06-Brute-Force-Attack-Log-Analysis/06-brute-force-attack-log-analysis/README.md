@@ -15,7 +15,7 @@ I reviewed authentication logs to identify potential Brute Force login attempts.
 * **Attacker IP**: `146.214.73.240`
 * **Observation**: The frequency and speed of the login attempts were faster than what would be humanly possible, strongly indicating the use of an automated script or bot attempting to brute force credentials.
 
-![Step 1](images/Brute_Force_Attack_Log_analysis-step1.png)
+![Step 1](../images/Brute_Force_Attack_Log_analysis-step1.png)
 
 ### Step 2: Identified the Attacker’s User-Agent
 I was tasked with identifying the attacker's User-Agent from the log entries to validate the consistency of the attack traffic.
