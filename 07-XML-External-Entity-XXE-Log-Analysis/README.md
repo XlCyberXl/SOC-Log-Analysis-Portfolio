@@ -37,8 +37,6 @@ I reviewed the server response code to determine if the application successfully
 ## 🏁 Project Wrap-Up / Conclusion
 Through forensic log analysis, I identified a clear XXE attack attempt where an attacker used encoded XML data to target the sensitive `/etc/shadow` file. The server’s **HTTP 200 response** indicates a lack of proper input validation or hardened XML parsing configurations. This project demonstrates my ability to detect complex web-based attacks, decode obfuscated payloads, and assess the effectiveness of security headers and application-level controls.
 
-![Step 4](images/xml_external_entity_attack-step4.png)
-
 ---
 
 ## 🛡️ Skills Demonstrated
