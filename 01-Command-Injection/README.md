@@ -1,108 +1,71 @@
-# Command Injection – High SIEM Alert
+# 💻 Command Injection – High SIEM Alert Investigation
 
-## 1. Alert / Detection Source
-A High-severity SIEM alert was triggered indicating possible Command Injection activity.  
-The alert flagged the string `ls` in a URL request. I received the alert, acknowledged it, and took ownership of the investigation.
-
----
-
-## 2. Initial Analyst Hypothesis
-Based on the alert, the initial hypothesis was that an attacker might be attempting command execution on a web server via URL or POST parameters.  
-At this stage, it was unknown whether the alert reflected a true attack or a false positive.
+## 🔍 Project Overview
+In this project, I investigated a **High-severity SIEM alert** indicating potential Command Injection activity. The alert flagged the string `ls` within a URL request. My investigation involved analyzing web server access logs, endpoint logs, and IP reputation to determine if the activity was a true cyber threat or a false positive.
 
 ---
 
-## 3. Log Sources Reviewed
-- SIEM alert logs
-- Web server access logs
-- Endpoint logs
-- Email security mailbox
+## 💡 Initial Analyst Hypothesis
+The initial hypothesis was that an attacker attempted to execute system commands (like `ls`) on the web server via URL or POST parameters. The goal of the investigation was to validate whether this was a successful exploit or a non-malicious event.
 
 ---
 
-## 4. Step-by-Step Investigation
+## 🛠️ Investigation Steps
 
-1. **Received and acknowledged the SIEM alert**  
-   Took ownership of the case and began the investigation.
+### Step 1: Alert Acknowledgement and Ownership
+I received and acknowledged the SIEM alert, officially taking ownership of the case to begin the forensic process.
 
 ![Step 1](images_ss/command_injection-ss1.png)
-
 ![Step 1.1](images_ss/command_injection-ss1.1.png)
 
-2. **Log analysis using source IP and alert time**  
-   - Reviewed logs using the source IP and alert timestamp (Feb 27, 2022, 12:36 AM)  
-   - POST parameters showed: `?s=skills`  
-   - Full URL: `https://letsdefend.io/blog/?s=skills`  
-   - HTTP response status: 200 OK, response size: 2577 bytes  
-   - Comparison with other requests from the same IP confirmed normal browsing behavior  
-   - No suspicious or malicious activity observed
+### Step 2: Deep Log Analysis and Traffic Review
+I reviewed the logs using the source IP and timestamp. While the alert flagged the `ls` string, the actual POST parameters showed a legitimate search query: `?s=skills`.
+* **Full URL**: `https://letsdefend.io/blog/?s=skills`
+* **HTTP Response**: 200 OK (2577 bytes).
+* **Conclusion**: Comparison with other requests from this IP confirmed normal user browsing behavior.
 
 ![Step 2](images_ss/command_injection-ss2.png)
-
 ![Step 2.1](images_ss/command_injection-ss2.1.png)
 
-3. **IP reputation and ownership analysis**  
-   - VirusTotal score: 0  
-   - IP ownership: Private / Reserved IP address  
-   - No known malicious reputation
+### Step 3: Threat Intelligence and IP Reputation
+I performed an external reputation check on the source IP to identify any known malicious history.
+* **VirusTotal Score**: 0 (Clean).
+* **IP Ownership**: Private / Reserved IP address with no known malicious reputation.
 
 ![Step 3](images_ss/command_injection-ss3.png)
-
 ![Step 3.1](images_ss/command_injection-ss3.1.png)
 
-4. **Checked for authorized testing**  
-   - Reviewed Email Security mailbox for planned tests involving the source or destination IP  
-   - No emails indicating authorized testing found
+### Step 4: Verification of Authorized Testing
+I checked the Email Security mailbox to see if any internal security teams were conducting authorized penetration testing or vulnerability scanning. No records of planned testing were found.
 
 ![Step 4](images_ss/command_injection-ss4.png)
-
 ![Step 4.1](images_ss/command_injection-ss4.1.png)
 
-5. **SIEM playbook execution and validation**  
-   - Initiated SIEM playbook and documented findings  
-   - Evidence supporting a false positive:
-     - VirusTotal score showed no malicious indicators  
-     - URL structure contained no command injection syntax  
-     - POST parameter represented a legitimate user search  
-     - Endpoint logs showed no commands executed on the host  
-     - No malicious activity detected
+### Step 5: Playbook Execution and Validation
+I followed the SIEM playbook to document the evidence. The investigation supported a **False Positive** conclusion based on:
+* Clean VirusTotal results.
+* Lack of command injection syntax in the URL.
+* Normal endpoint logs showing no unauthorized system commands executed.
 
 ![Step 5](images_ss/command_injection-ss5.png)
 
-6. **Traffic validation**  
-   - Reviewed additional traffic from this IP  
-   - Confirmed other activity was present, but none was malicious
+### Step 6: Final Traffic Validation and Case Closure
+After reviewing additional traffic and confirming no other malicious activity was present, I entered final analyst comments and officially closed the incident in the SIEM.
 
 ![Step 6](images_ss/command_injection-ss6.png)
-
-7. **Incident closure**  
-   - Entered final analyst comments in SIEM  
-   - Closed the case
-
 ![Step 7](images_ss/command_injection-ss7.png)
-
 ![Step 7.1](images_ss/command_injection-ss7.1.png)
-
 ![Step 7.2](images_ss/command_injection-ss7.2.png)
 
 ---
 
-## 5. Evidence of Exploitation
-- None — alert was determined to be a false positive  
-- No command execution occurred  
-- All HTTP responses were normal (200 OK)  
+## 🏁 Project Wrap-Up / Conclusion
+This investigation determined the alert to be a **False Positive**. The flagged `ls` string was part of a legitimate search query (`skills`), and no actual command execution occurred. This project highlights my ability to use SIEM playbooks, perform IP reputation checks, and conduct granular log analysis to distinguish between noise and actual security threats.
 
 ---
 
-## 6. Conclusion
-The investigation confirmed that the SIEM alert was a **false positive**:  
-- The `ls` string detected in the URL was part of the word “skills”  
-- User was browsing the letsdefend.io website  
-- No malicious behavior observed at network, endpoint, or application levels  
-
----
-
-## 7. Mitigation & Recommendations
-- Maintain SIEM tuning to reduce false positives  
-- Ensure analysts validate alerts with context and log correlation  
-- Continue monitoring for real command injection attempts
+## 🛡️ Skills Demonstrated
+* **SIEM Incident Response**: Managing alerts from detection through to closure.
+* **Log Forensics**: Identifying the difference between malicious payloads and legitimate URL parameters.
+* **Threat Intelligence**: Utilizing VirusTotal for IP and domain reputation analysis.
+* **Playbook Adherence**: Following structured SOC procedures to validate and document findings.
