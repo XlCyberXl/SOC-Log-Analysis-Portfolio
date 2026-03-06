@@ -29,17 +29,17 @@ The alert indicated potential SQL injection attempts targeting a web application
    - UNION SELECT
    - SQL comment markers (--)
 
-![Step 2](images_ss/sql-step2.png)
+![Step 2](images/sql-step2.png)
 
 3. Analyzed request frequency from the source IP to determine if behavior indicated automated scanning.
 
-![Step 3](images_ss/sql-step3.png)
+![Step 3](images/sql-step3.png)
 
 4. Reviewed HTTP response codes:
    - 200 responses analyzed for potential successful injection  
    - 403 / 500 responses reviewed for blocked or failed attempts  
 
-![Step 4](images_ss/sql-step4.png)
+![Step 4](images/sql-step4.png)
 
 5. Correlated events within the SIEM to determine whether other attack techniques were observed from the same IP address.
 
@@ -50,11 +50,11 @@ The alert indicated potential SQL injection attempts targeting a web application
 - No confirmed database compromise based on available logs  
 - Activity classified as active exploitation attempt  
 
-![Step 5](images_ss/sql-step5.png)
+![Step 5](images/sql-step5.png)
 
 ## 6. Conclusion
 
-![Step 6](images_ss/sql-step6.png)
+![Step 6](images/sql-step6.png)
 
 The SIEM alert accurately detected SQL injection attack attempts targeting the web application. Analysis confirmed malicious input patterns consistent with automated SQLi exploitation techniques. No confirmed data exfiltration was observed, but the activity represented a legitimate attack attempt.
 
@@ -62,7 +62,7 @@ This project demonstrates the ability to triage SIEM alerts, validate detection 
 
 ## 7. Mitigation & Recommendations
 
-![Step 7](images_ss/sql-step7.png)
+![Step 7](images/sql-step7.png)
 
 - Enforce parameterized queries (prepared statements)  
 - Strengthen WAF rules for SQL injection detection  
