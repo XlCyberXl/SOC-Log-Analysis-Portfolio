@@ -23,7 +23,6 @@ The alert indicated potential SQL injection attempts targeting a web application
 
 ![SIEM Alert Trigger](images/sql-step1.png)
 
-*Figure 1: SQL injection detection rule triggered in SIEM.*
 2. Identified HTTP requests containing SQL injection patterns such as:
    - ' OR '1'='1
    - UNION SELECT
