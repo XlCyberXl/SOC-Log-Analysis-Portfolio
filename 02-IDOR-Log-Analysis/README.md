@@ -1,52 +1,62 @@
-# IDOR (Insecure Direct Object Reference) Log Analysis
+# IDOR (Insecure Direct Object Reference) Attack Investigation - Log Analysis
 
-## 1. Alert / Detection Source
-The investigation was initiated after reviewing web server access logs for suspicious object references passed through URL parameters. The activity suggested possible unauthorized access to resources by manipulating object identifiers.
-
----
-
-## 2. Initial Analyst Hypothesis
-Based on the presence of object identifiers within URL parameters, the initial hypothesis was that an attacker might be attempting to access resources belonging to other users by modifying object IDs without proper authorization checks.
-
-At this stage, it was unknown whether the server enforced access controls or if the requests were successfully processed.
+## Overview
+This project demonstrates how Apache access logs were analyzed to identify activity consistent with an **Insecure Direct Object Reference (IDOR)** attack. The investigation focuses on identifying abnormal request patterns, analyzing HTTP response codes, and assessing whether an attacker may have attempted to enumerate user resources.
 
 ---
 
-## 3. Log Sources Reviewed
-- Web server access logs
+## Step 1: Identifying Suspicious Activity in Apache Logs
+
+I began the investigation by reviewing Apache access logs to identify unusual request patterns that could indicate malicious behavior.
+
+During the review, I observed that the IP address **192.168.31.174** was generating a high volume of requests within a very short time interval. This type of behavior is commonly associated with automated scanning tools or scripted attacks.
+
+Further analysis showed that the attacker was repeatedly requesting different user IDs through the same endpoint. This pattern is consistent with **object enumeration**, which is commonly used when attempting to exploit an IDOR vulnerability.
+
+### Evidence
+
+![Step 1](images/idor-step1.png)
 
 ---
 
-## 4. Step-by-Step Investigation
+## Step 2: Analyzing Server Response Codes
 
-1. Reviewed web server access logs to identify requests containing object identifiers passed via URL parameters.
+After identifying the suspicious request patterns, I reviewed the HTTP response codes returned by the server.
 
-2. Identified multiple requests where object IDs were modified manually, indicating potential enumeration of resources.
+The logs showed that the requests consistently received **HTTP 200 OK** responses, indicating that the server successfully processed the requests.
 
-3. Correlated requests by source IP address and timestamp to confirm repeated access attempts involving different object IDs.
+However, response codes alone do not confirm whether:
 
-4. Analyzed server responses associated with the modified object ID requests.
+- Sensitive data was returned
+- Authorization controls were bypassed
+- The attacker successfully accessed other users' data
 
-5. Observed consistent HTTP 200 OK responses for requests targeting unauthorized object IDs, indicating the server processed the requests successfully.
+Further analysis of application logs or response content would be required to confirm data exposure.
 
-6. Confirmed that no server-side authorization checks were enforced to validate whether the requesting user was permitted to access the referenced objects.
+### Evidence
 
----
-
-## 5. Evidence of Exploitation
-- Unauthorized object IDs were accepted by the server  
-- HTTP 200 OK responses returned for modified object references  
-- Requested objects were successfully retrieved without access restrictions  
+![Step 2](images/idor-step2.png)
 
 ---
 
-## 6. Conclusion
-This investigation confirmed the presence of an **Insecure Direct Object Reference (IDOR)** vulnerability. The application failed to enforce server-side authorization checks, allowing access to resources by simply modifying object identifiers in the request.
+## Step 3: Investigation Summary
+
+Through analysis of Apache access logs, I identified behavior consistent with a potential **IDOR attack attempt**.
+
+Key findings from the investigation include:
+
+- A single IP address (**192.168.31.174**) generating a high volume of requests within a short time window
+- Systematic enumeration of multiple user IDs through the same endpoint
+- Consistent **HTTP 200 OK** responses indicating the server processed each request successfully
+
+Although the logs do not confirm whether sensitive data was exposed, the request pattern strongly suggests an attempted and potentially successful exploitation of an IDOR vulnerability.
 
 ---
 
-## 7. Mitigation & Recommendations
-- Enforce server-side authorization checks for all object references  
-- Avoid exposing direct object identifiers in URLs  
-- Implement access control validation based on user context  
-- Log and monitor repeated object ID enumeration attempts
+## Skills Demonstrated
+
+- Web server log analysis
+- Identification of abnormal request patterns
+- Attribution of suspicious activity to a source IP
+- Analysis of HTTP response codes
+- Investigation of web application security vulnerabilities
