@@ -25,8 +25,6 @@ The alert indicated potential SQL injection attempts targeting a web application
 
 2. Identified HTTP requests containing SQL injection patterns such as:
    - ' OR '1'='1
-   - UNION SELECT
-   - SQL comment markers (--)
 
 ![Step 2](images/sql-step2.png)
 
