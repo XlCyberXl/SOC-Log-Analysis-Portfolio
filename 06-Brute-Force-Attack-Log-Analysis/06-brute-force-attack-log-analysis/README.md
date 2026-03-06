@@ -23,7 +23,7 @@ I was tasked with identifying the attacker's User-Agent from the log entries to 
 * **User-Agent**: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.5615.50 Safari/537.36`
 * **Significance**: Identifying the User-Agent helped attribute the activity to the same source and confirmed it was a modern browser environment being emulated by the attack tool.
 
-![Step 2](images/Brute_Force_Attack_Log_analysis-step2.png)
+![Step 2](../images/Brute_Force_Attack_Log_analysis-step2.png)
 
 ### Step 3: Determined When the Brute Force Attack was Successful
 I continued reviewing the logs to determine whether the brute force attack was eventually successful.
@@ -31,7 +31,7 @@ I continued reviewing the logs to determine whether the brute force attack was e
 * **Finding**: I identified an **HTTP 302 response** on **26/Apr/2023 at 21:44:03**.
 * **Analysis**: This response code indicates a successful authentication followed by a redirect. This confirmed the exact date and time the attacker successfully breached the account.
 
-![Step 3](images/Brute_Force_Attack_Log_analysis-step3.png)
+![Step 3](../images/Brute_Force_Attack_Log_analysis-step3.png)
 
 ---
 
