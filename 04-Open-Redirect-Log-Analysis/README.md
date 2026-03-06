@@ -35,10 +35,10 @@ I reviewed the server response code for the suspicious request to determine if t
 * **Server Response**: **HTTP 400 (Bad Request)**
 * **Conclusion**: This indicates that the server rejected the request. The redirect was not processed, and no redirection occurred. Based on this response, I determined the open redirect attack attempt was **unsuccessful**.
 
-![Step 4](images/open_redirect-step4.png)
-
 ## 🏁 Project Wrap-Up / Conclusion
 Through systematic log analysis, I identified a request containing URL-encoded characters within the `postId` parameter, which decoded to an external domain (`example.com`). While the attacker attempted to use encoding to bypass basic validation, the server successfully rejected the request with a **400 Bad Request** response. This project demonstrates my ability to accurately detect and assess attack success through web server log forensics.
+
+---
 
 ## 🛡️ Skills Demonstrated
 * **Web Server Log Analysis**: Expertise in parsing Apache access logs for security events.
