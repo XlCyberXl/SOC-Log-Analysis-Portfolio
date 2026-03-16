@@ -64,6 +64,16 @@ This investigation determined the alert to be a **False Positive**. The flagged 
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the findings from this investigation, the following security measures are recommended to prevent command injection vulnerabilities:
+
+- **Implement strict input validation and sanitization** to ensure user-supplied data cannot be interpreted as system commands.
+- **Use parameterized or safe API methods** when executing system-level operations instead of directly passing user input to command interpreters.
+- **Apply the principle of least privilege** so that application processes do not run with unnecessary system-level permissions.
+- **Disable unnecessary command execution capabilities** within the application environment.
+- **Deploy WAF rules capable of detecting command injection patterns** such as shell operators (`;`, `&&`, `|`) and suspicious command strings.
+
 ## 🛡️ Skills Demonstrated
 * **SIEM Incident Response**: Managing alerts from detection through to closure.
 * **Log Forensics**: Identifying the difference between malicious payloads and legitimate URL parameters.
