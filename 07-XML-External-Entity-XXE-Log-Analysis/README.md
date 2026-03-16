@@ -39,6 +39,16 @@ Through forensic log analysis, I identified a clear XXE attack attempt where an 
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the indicators of XML External Entity (XXE) exploitation identified during this investigation, the following mitigation strategies are recommended:
+
+- **Disable external entity processing within XML parsers** to prevent malicious entity resolution.
+- **Use secure XML parser configurations** that prohibit external resource loading.
+- **Validate and sanitize XML input before processing** to prevent injection of malicious entities.
+- **Restrict outbound network access from application servers** to prevent external resource retrieval.
+- **Implement monitoring and logging for unusual XML processing behavior** to detect future exploitation attempts.
+
 ## 🛡️ Skills Demonstrated
 * **Advanced Log Forensics**: Identifying complex injection-style attacks in high-volume traffic.
 * **Payload Decoding**: Utilizing tools to reveal hidden attacker intent within obfuscated data.
