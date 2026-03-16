@@ -83,6 +83,16 @@ The investigation confirmed the presence of exploitable input handling within th
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the reflected Cross-Site Scripting (XSS) activity identified during this investigation, the following mitigation strategies are recommended:
+
+- **Implement proper output encoding for all user-supplied data** before rendering it within web pages.
+- **Apply strict input validation to prevent malicious script content from being accepted by the application.**
+- **Deploy Content Security Policy (CSP) headers** to restrict execution of unauthorized scripts.
+- **Use a Web Application Firewall (WAF)** to detect and block known XSS payload patterns.
+- **Perform regular security testing and code reviews** to identify and remediate input handling vulnerabilities.
+
 ## 🛡️ Skills Demonstrated
 - Web Application Log Analysis
 - Cross-Site Scripting (XSS) Detection
