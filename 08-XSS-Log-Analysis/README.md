@@ -1,48 +1,91 @@
-## 🔍 Security Projects
+# 🚨 Cross-Site Scripting (XSS) Log Analysis
 
-### 1. Cross-Site Scripting (XSS) Log Analysis
-**Type:** Web Application Attack Investigation  
-**Logs Analyzed:** Apache Access Logs  
-**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response  
+## 🔍 Project Overview
+In this project, I analyzed Apache web server access logs to investigate a potential Cross-Site Scripting (XSS) attack. During the investigation, I identified malicious script payloads embedded within HTTP GET request parameters. By analyzing the log entries, I determined the source IP responsible for the activity, evaluated server response behavior, and classified the attack as a **Reflected Cross-Site Scripting (XSS) attempt**.
 
-➡️ [View Project](./08-XSS-Log-Analysis/)
+---
 
-# Cross-Site Scripting (XSS) Log Analysis
+## 💡 Initial Analyst Hypothesis
+During initial log review, I observed suspicious URL parameters containing encoded and unencoded script content. Based on these indicators, my initial hypothesis was that an attacker was attempting to exploit a **Reflected Cross-Site Scripting vulnerability** by injecting malicious client-side scripts into HTTP requests.
 
-## 1. Alert / Detection Source
-The investigation was initiated after reviewing web server access logs for suspicious URL parameters containing client-side script content.
+At this stage, it was unclear whether the payload had been successfully executed or if the server had blocked or sanitized the malicious input.
 
-The activity was indicative of potential Cross-Site Scripting (XSS) attempts, based on the presence of encoded and unencoded script payloads within HTTP GET request parameters.
-## 2. Initial Analyst Hypothesis
-Based on the presence of script-based payloads within URL parameters, the initial hypothesis was that an attacker was attempting to execute a reflected Cross-Site Scripting (XSS) attack.
+---
 
-At this stage, it was unknown whether the payloads were successfully executed by the client or merely reflected in server responses without execution.
-## 3. Log Sources Reviewed
-- Web server access logs
-## 4. Step-by-Step Investigation
-1. Reviewed Apache web server access logs to identify the initial occurrence of suspicious URL parameters indicative of Cross-Site Scripting (XSS) activity.
+## 🛠️ Investigation Steps
 
-   During log review, I identified a request containing keywords such as `alert` and `script`, which are commonly associated with XSS payloads. Based on this log entry, the attack start time was identified as 01/Mar/2022:08:53:20.
-(Screenshot: screenshots/step-1-access-logs.png)
-2. Analyzed the same Apache access log entry to identify the source IP address responsible for the malicious request.
-(Screenshot: screenshots/step-2-filtered-requests.png)
-   The source IP address associated with the XSS payload was identified as 192.168.31.183. This IP address was consistently observed in requests containing the malicious script content.
+### 1️⃣ Identifying Suspicious Script Payloads in Access Logs
+I began the investigation by reviewing Apache web server access logs for indicators of script-based injection attempts.
 
-3. Evaluated HTTP response codes returned by the server to determine whether the XSS payload was successfully processed.
-(Screenshot: screenshots/step-3-payload.png
-   The server consistently returned HTTP 200 OK responses for requests containing the malicious payload. No defensive indicators were observed, including the absence of 400-series client errors, 403 Forbidden responses, WAF block messages, redirects, or server-side error responses. This indicated that the server processed the malicious request without blocking or sanitization.
+During this review, I identified requests containing keywords such as `script` and `alert`, which are commonly associated with Cross-Site Scripting payloads. These indicators suggested that an attacker was attempting to inject client-side scripts through URL parameters.
 
-4. Analyzed request and response behavior to classify the type of Cross-Site Scripting (XSS) attack observed.
+From the log entry, I determined that the attack activity began at:
 
-   The malicious payload was present directly within the URL parameters and was processed by the server, which ruled out Stored XSS due to the absence of persistence mechanisms such as database writes or form submissions. The lack of client-side-only execution or DOM manipulation ruled out DOM-based XSS. Based on these indicators, the attack was classified as a Reflected Cross-Site Scripting (XSS) attempt.
+**01/Mar/2022:08:53:20**
 
-## 5. Evidence of Exploitation
-Payload was reflected
-HTTP 200 responses observed
-No sanitization detected
-## 6. Conclusion
-This investigation confirmed a successful reflected XSS attack identified through Apache access log analysis, including clear indicators of exploitation timing, attacker IP address, and attack classification.
+![Step 1](screenshots/step-1-access-logs.png)
 
-## 7. Mitigation & Recommendations
-Input validation
-WAF rules
+---
+
+### 2️⃣ Identifying the Attacker’s Source IP Address
+Next, I analyzed the log entries associated with the malicious payload to identify the source of the attack traffic.
+
+The requests containing the injected script payload were traced back to the following IP address:
+
+**192.168.31.183**
+
+This IP address consistently appeared in requests containing the malicious script content, indicating it was the likely origin of the attack attempts.
+
+![Step 2](screenshots/step-2-filtered-requests.png)
+
+---
+
+### 3️⃣ Analyzing HTTP Response Codes
+To determine whether the malicious payload was processed by the server, I evaluated the HTTP response codes returned for the suspicious requests.
+
+The server consistently returned:
+
+**HTTP 200 OK**
+
+No defensive indicators were observed, including:
+
+- 400-series client errors  
+- 403 Forbidden responses  
+- WAF block messages  
+- Redirects  
+- Server-side error responses  
+
+This suggested that the server processed the malicious request without blocking or sanitizing the input.
+
+![Step 3](screenshots/step-3-payload.png)
+
+---
+
+### 4️⃣ Classifying the XSS Attack Type
+After analyzing the request behavior and server responses, I evaluated the characteristics of the attack to determine the specific XSS category.
+
+The malicious script payload was embedded directly within the URL parameters and immediately processed by the server response.
+
+Key observations included:
+
+- No persistence mechanisms such as database writes or stored form submissions
+- No evidence of DOM-based client-side execution without server interaction
+- Payload delivered directly through the request URL
+
+Based on these findings, the activity was classified as a **Reflected Cross-Site Scripting (XSS) attack**.
+
+---
+
+## 🏁 Project Wrap-Up / Conclusion
+Through systematic analysis of Apache access logs, I identified a reflected Cross-Site Scripting (XSS) attack originating from the IP address **192.168.31.183**. The malicious payload was delivered through URL parameters and processed by the server, which returned **HTTP 200 OK responses**, indicating that the input was neither sanitized nor blocked.
+
+The investigation confirmed the presence of exploitable input handling within the web application, allowing malicious client-side scripts to be reflected in server responses.
+
+---
+
+## 🛡️ Skills Demonstrated
+- **Web Application Log Analysis**
+- **Cross-Site Scripting (XSS) Detection**
+- **Apache Access Log Investigation**
+- **Attack Classification and Attribution**
+- **Security Incident Documentation**
