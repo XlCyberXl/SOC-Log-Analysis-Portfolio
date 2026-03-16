@@ -30,6 +30,16 @@ Through systematic log analysis, I identified behavior consistent with a potenti
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the results of this investigation, the following measures are recommended to prevent Insecure Direct Object Reference (IDOR) vulnerabilities:
+
+- **Implement proper authorization checks** to ensure users can only access resources they are explicitly permitted to view.
+- **Avoid exposing predictable object identifiers** such as sequential IDs within URLs or request parameters.
+- **Use indirect reference maps or randomized identifiers** to prevent attackers from easily enumerating resources.
+- **Perform server-side access validation for every request**, rather than relying on client-side controls.
+- **Monitor logs for abnormal access patterns**, such as repeated attempts to access multiple object IDs from a single user session or IP address.
+
 ## 🛡️ Skills Demonstrated
 * **Web Server Log Analysis**: Identifying indicators of compromise (IoC) within Apache access logs.
 * **Pattern Recognition**: Detecting automated object enumeration and abnormal request volumes.
