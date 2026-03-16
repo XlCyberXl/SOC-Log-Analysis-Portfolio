@@ -34,6 +34,16 @@ Through systematic log analysis, I detected a brute force attack originating fro
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the brute force attack patterns identified during this investigation, the following defensive measures are recommended:
+
+- **Implement account lockout policies** after a defined number of failed login attempts.
+- **Deploy rate limiting controls** to slow down automated login attempts originating from a single IP address.
+- **Enable multi-factor authentication (MFA)** to prevent unauthorized access even if credentials are compromised.
+- **Monitor authentication logs for abnormal login attempt frequency**.
+- **Block or temporarily restrict IP addresses** that repeatedly generate malicious authentication attempts.
+
 ## 🛡️ Skills Demonstrated
 * **Authentication Log Analysis**: Identifying automated credential stuffing and brute force patterns.
 * **Behavioral Profiling**: Distinguishing between human and bot-driven traffic speeds.
