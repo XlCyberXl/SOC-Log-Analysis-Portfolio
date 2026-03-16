@@ -41,6 +41,16 @@ In this project, I successfully identified a Directory Traversal attack attempt 
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the findings of this investigation, the following mitigation strategies are recommended to prevent directory traversal attacks:
+
+- **Implement strict input validation for file path parameters** to prevent unauthorized directory access.
+- **Normalize and sanitize file paths** to remove traversal sequences such as `../`.
+- **Restrict application access to specific directories using allowlists**.
+- **Run applications with minimal filesystem permissions** to limit the impact of successful traversal attempts.
+- **Deploy WAF rules designed to detect directory traversal patterns** commonly used during exploitation attempts.
+
 ## 🛡️ Skills Demonstrated
 * **Web Server Log Analysis**: Identifying indicators of compromise (IoC) in Apache logs.
 * **Attack Reconstruction**: Isolating attacker IP addresses and identifying vulnerable parameters.
