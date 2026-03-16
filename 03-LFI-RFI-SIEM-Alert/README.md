@@ -65,6 +65,16 @@ This investigation confirmed a **true positive LFI/RFI attack attempt** originat
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the indicators observed during this investigation, the following defensive controls are recommended to mitigate Local File Inclusion (LFI) and Remote File Inclusion (RFI) vulnerabilities:
+
+- **Implement strict input validation for file path parameters** to ensure only approved file locations can be accessed.
+- **Disable remote file inclusion capabilities** within the application configuration whenever possible.
+- **Use allowlists for file access operations** to restrict which files or directories the application is permitted to load.
+- **Sanitize user input to remove path traversal characters** such as `../` that may be used to access unauthorized files.
+- **Deploy SIEM alerts for suspicious file inclusion patterns** to quickly identify exploitation attempts.
+
 ## 🛡️ Skills Demonstrated
 * **SIEM Operations:** Full lifecycle management of high-severity alerts.
 * **Threat Intelligence:** Adversary profiling using VirusTotal and WHOIS.
