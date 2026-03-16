@@ -14,7 +14,7 @@ At this stage, it was unclear whether the payload had been successfully executed
 
 ## 🛠️ Investigation Steps
 
-### 1️⃣ Identifying Suspicious Script Payloads in Access Logs
+### Step 1: Identified Suspicious Script Payloads in Access Logs
 I began the investigation by reviewing Apache web server access logs for indicators of script-based injection attempts.
 
 During this review, I identified requests containing keywords such as `script` and `alert`, which are commonly associated with Cross-Site Scripting payloads. These indicators suggested that an attacker was attempting to inject client-side scripts through URL parameters.
@@ -27,7 +27,7 @@ From the log entry, I determined that the attack activity began at:
 
 ---
 
-### 2️⃣ Identifying the Attacker’s Source IP Address
+### Step 2: Identified the Attacker’s Source IP Address
 Next, I analyzed the log entries associated with the malicious payload to identify the source of the attack traffic.
 
 The requests containing the injected script payload were traced back to the following IP address:
@@ -40,7 +40,7 @@ This IP address consistently appeared in requests containing the malicious scrip
 
 ---
 
-### 3️⃣ Analyzing HTTP Response Codes
+### Step 3: Analyzed HTTP Response Codes
 To determine whether the malicious payload was processed by the server, I evaluated the HTTP response codes returned for the suspicious requests.
 
 The server consistently returned:
@@ -61,7 +61,7 @@ This suggested that the server processed the malicious request without blocking 
 
 ---
 
-### 4️⃣ Classifying the XSS Attack Type
+### Step 4: Classified the XSS Attack Type
 After analyzing the request behavior and server responses, I evaluated the characteristics of the attack to determine the specific XSS category.
 
 The malicious script payload was embedded directly within the URL parameters and immediately processed by the server response.
@@ -84,7 +84,11 @@ The investigation confirmed the presence of exploitable input handling within th
 ---
 
 ## 🛡️ Skills Demonstrated
-- **Web Application Log Analysis**
+- Web Application Log Analysis
+- Cross-Site Scripting (XSS) Detection
+- Apache Access Log Investigation
+- Attack Classification and Attribution
+- Security Incident Documentation
 - **Cross-Site Scripting (XSS) Detection**
 - **Apache Access Log Investigation**
 - **Attack Classification and Attribution**
