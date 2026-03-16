@@ -53,7 +53,7 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Type:** Web Attack Log Analysis  
 **Logs Analyzed:** Web Server Access Logs  
 **Skills Demonstrated:** Path Traversal Detection, HTTP Log Analysis, Exploitation Validation 
-### 6. [Brute Force Attack Log Analysis](06-brute-force-attack-log-analysis)
+### [6. Brute Force Attack Log Analysis](06-brute-force-attack-log-analysis)
 **Type:** Authentication Log Analysis  
 **Logs Analyzed:** Authentication & Web Server Access Logs  
 **Skills Demonstrated:** Brute Force Detection, Login Pattern Analysis, HTTP Response Interpretation 
