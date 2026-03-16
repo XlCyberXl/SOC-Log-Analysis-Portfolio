@@ -40,6 +40,16 @@ Through systematic log analysis, I identified a request containing URL-encoded c
 
 ---
 
+## 🔒 Mitigation & Recommendations
+
+Based on the activity identified during this investigation, the following security improvements are recommended to mitigate open redirect vulnerabilities:
+
+- **Implement strict validation of redirect URLs** to ensure they only point to trusted internal destinations.
+- **Use allowlisted domains for redirect functionality** to prevent attackers from directing users to malicious external sites.
+- **Avoid passing full redirect URLs directly through user-controlled parameters**.
+- **Display warning prompts when redirecting users to external websites**.
+- **Monitor logs for abnormal redirect patterns**, particularly those leading to unknown or suspicious domains.
+
 ## 🛡️ Skills Demonstrated
 * **Web Server Log Analysis**: Expertise in parsing Apache access logs for security events.
 * **Payload Decoding**: Ability to identify and decode URL-encoded characters to reveal attacker intent.
