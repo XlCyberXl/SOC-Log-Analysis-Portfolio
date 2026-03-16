@@ -31,6 +31,10 @@ My investigation style emphasizes:
 
 ## Investigation Projects
 
+> 💡 **Note on Investigation Data:** The projects featured in this portfolio are simulated attack investigations based on lab environments from industry-recognized training platform, **LetsDefend** X **Hack The Box**. 
+
+---
+
 ### [1. Command Injection – High SIEM Alert](./01-Command-Injection/)
 
 **Type:** Web Application Attack Investigation  
