@@ -72,6 +72,18 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response 
 ### [9. SQL Injection (SQLi) – SIEM Alert Investigation](./09-SQL-Injection-SIEM-Alert/)
 
+---
+
+## Home Labs
+
+### [10. Wazuh SIEM: Endpoint Monitoring & FIM](./10-wazuh-home-lab/)
+**Type:** SIEM Deployment & Endpoint Security  
+**Environment:** Ubuntu (Manager), Windows (Agent)  
+**Skills Demonstrated:** SIEM Administration, File Integrity Monitoring (FIM), XML Configuration, Real-Time Alerting
+
+---
+
+
 **Type:** SIEM Alert Triage & Validation  
 **Data Reviewed:** SIEM Alerts, Apache Access Logs  
 **Skills Demonstrated:** Alert Analysis, SQL Injection Detection, Log Correlation 
