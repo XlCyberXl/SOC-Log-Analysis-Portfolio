@@ -26,6 +26,7 @@ To resolve this, I performed a clean uninstall of the agent and reinstalled vers
 I then used the `manage_agents` tool to generate an authentication key and securely register the agent.
 
 ![Step 1](10-wazuh-home-lab/images/wazuh_screenshot1.png)
+
 ---
 
 ### Step 2: Verifying Real-Time Agent Activity
@@ -37,7 +38,7 @@ This confirmed that agent ID 010 (DESKTOP-8TFDJBA) was active.
 
 During setup, multiple "ghost" agents were created due to naming conflicts. I identified and isolated the correct active agent to maintain a clean monitoring environment.
 
-![Step 2](images/wazuh_screenshot2.png)
+![Step 2](10-wazuh-home-lab/images/wazuh_screenshot2.png)
 
 ---
 
@@ -59,7 +60,7 @@ This enabled detection of:
 
 To test the configuration, I created a file named `alert-test.txt` in the monitored directory.
 
-![Step 3](images/wazuh_screenshot3.png)
+![Step 3](10-wazuh-home-lab/images/wazuh_screenshot3.png)
 
 ---
 
@@ -72,7 +73,7 @@ The SIEM displayed:
 
 This confirmed that the detection pipeline was functioning correctly.
 
-![Step 4](images/wazuh_screenshot4.png)
+![Step 4](10-wazuh-home-lab/images/wazuh_screenshot4.png)
 
 ---
 
@@ -83,7 +84,7 @@ By resolving version mismatches, configuring endpoint monitoring, and validating
 
 This setup mirrors real-world SOC workflows used to detect persistence techniques and unauthorized modifications.
 
-![Dashboard Evidence](images/wazuh_screenshot5.png)
+![Dashboard Evidence](10-wazuh-home-lab/images/wazuh_screenshot5.png)
 
 ---
 
