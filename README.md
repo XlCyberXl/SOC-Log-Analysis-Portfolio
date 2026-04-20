@@ -76,7 +76,7 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 
 ## Home Labs
 
-### [10. Wazuh SIEM: Endpoint Monitoring & FIM](./10-wazuh-home-lab/)
+### [10. Wazuh SIEM: Endpoint Monitoring & File Integrity Monitoring (FIM)](./10-wazuh-home-lab/)
 **Type:** SIEM Deployment & Endpoint Security  
 **Environment:** Ubuntu (Manager), Windows (Agent)  
 **Skills Demonstrated:** SIEM Administration, File Integrity Monitoring (FIM), XML Configuration, Real-Time Alerting
