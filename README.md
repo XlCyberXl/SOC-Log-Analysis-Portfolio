@@ -1,4 +1,4 @@
-# Da'Shayne's Portfolio of Cybersecurity Projects
+# Da'Shayne's Cybersecurity Portfolio
 
 ## Overview
 This repository contains hands-on SOC and Incident Response log analysis investigations focused on identifying, validating, and documenting real-world attack techniques using web server logs and SIEM data.
