@@ -25,8 +25,7 @@ To resolve this, I performed a clean uninstall of the agent and reinstalled vers
 
 I then used the `manage_agents` tool to generate an authentication key and securely register the agent.
 
-![Step 1](images/wazuh_screenshot1.png)
-
+![Step 1](10-wazuh-home-lab/images/wazuh_screenshot1.png)
 ---
 
 ### Step 2: Verifying Real-Time Agent Activity
