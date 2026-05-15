@@ -17,15 +17,17 @@ All investigations are documented step-by-step, with each step mapped to support
 ## Analyst Background
 I currently work in technical support and am transitioning into a SOC / Information Security role.
 
-I have hands-on experience analyzing:
-- Web server access logs
-- Authentication and login activity
-- SIEM alerts related to web exploitation and abuse patterns
+Dedicated SOC Analyst Candidate 🛡️
 
-My investigation style emphasizes:
-- Strict step-by-step analysis
-- Evidence-driven conclusions
-- Clear differentiation between attempted and successful exploitation
+Focused on mastering the art of the investigation. I have built a hands-on lab environment to simulate and defend against modern threats.
+
+Core Competencies:
+
+📊 Log Analysis: Deep-dive inspection of Web Server access logs for malicious traffic.
+
+🛡️ SIEM Triage: Correlating alerts with endpoint telemetry to validate and escalate threats.
+
+📑 Incident Documentation: Translating complex log data into clear, concise incident reports.
 
 ---
 
