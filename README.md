@@ -83,6 +83,10 @@ Skills Demonstrated: Access Control Analysis, Authorization Bypass Detection
 **Environment:** Ubuntu (Manager), Windows (Agent)  
 **Skills Demonstrated:** SIEM Administration, File Integrity Monitoring (FIM), XML Configuration, Real-Time Alerting
 
+### [11. AI-Enhanced SOC Automation: From SIEM Alerts to Intelligent Triage](./11-ai-soc-triage-bot/)
+**Type:** SOC Automation & AI Integration
+**Environment:** Windows, Wazuh SIEM, Groq AI (LLaMA 3.3)
+**Skills Demonstrated:** Python Scripting, AI Integration, Prompt Engineering, MITRE ATT&CK Mapping, OWASP Classification, SOC Automation
 ---
 
 
