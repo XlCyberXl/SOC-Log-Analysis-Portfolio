@@ -95,7 +95,8 @@ Built `triage_bot.py` — the core of the project. This script reads the Wazuh a
 
 The AI is instructed via a system message to act as an expert SOC analyst and base its analysis on NIST cybersecurity frameworks, MITRE ATT&CK, and OWASP Top 10.
 
-![Step 5](screenshots/13-ai-triage-bot-working.png)
+![Step 5 Code](screenshots/13-ai-triage-bot-code.png)
+![Step 5 Working](screenshots/13-ai-triage-bot-working.png)
 
 ---
 
