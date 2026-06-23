@@ -44,17 +44,23 @@ incident reports.
 
 ## Home Labs
 
-### [11. AI-Enhanced SOC Automation: From SIEM Alerts to Intelligent Triage](./11-ai-soc-triage-bot/)
+### [Lab 1. AI-Enhanced SOC Automation: From SIEM Alerts to Intelligent Triage](./11-ai-soc-triage-bot/)
 **Type:** SOC Automation & AI Integration  
 **Environment:** Windows, Wazuh SIEM, Groq AI (LLaMA 3.3)  
 **Skills Demonstrated:** Python Scripting, AI Integration, Prompt Engineering, 
 MITRE ATT&CK Mapping, OWASP Classification, SOC Automation
 
-### [10. Wazuh SIEM: Endpoint Monitoring & File Integrity Monitoring (FIM)](./10-wazuh-home-lab/)
+### [Lab 2. Wazuh SIEM: Endpoint Monitoring & File Integrity Monitoring (FIM)](./10-wazuh-home-lab/)
 **Type:** SIEM Deployment & Endpoint Security  
 **Environment:** Ubuntu (Manager), Windows (Agent)  
 **Skills Demonstrated:** SIEM Administration, File Integrity Monitoring (FIM), 
 XML Configuration, Real-Time Alerting
+
+### [Lab 3. Home Network Vulnerability Assessment — Tenable Nessus Essentials](./013-Nessus-Vulnerability-Assessment/)
+**Type:** Vulnerability Management & Assessment  
+**Environment:** Windows 11, Tenable Nessus Essentials  
+**Skills Demonstrated:** Vulnerability Scanning, CVSS Scoring, Plugin Analysis, 
+Risk Prioritization, Vulnerability Management Lifecycle, Security Documentation
 
 ---
 
@@ -64,53 +70,53 @@ XML Configuration, Real-Time Alerting
 are simulated attack investigations based on lab environments from 
 industry-recognized training platforms, **LetsDefend** X **Hack The Box**.
 
-### [9. SQL Injection (SQLi) – SIEM Alert Investigation](./09-SQL-Injection-SIEM-Alert/)
-**Type:** SIEM Alert Triage & Validation  
-**Data Reviewed:** SIEM Alerts, Apache Access Logs  
-**Skills Demonstrated:** Alert Analysis, SQL Injection Detection, Log Correlation
-
-### [8. Cross-Site Scripting (XSS) Log Analysis](./08-XSS-Log-Analysis/)
+### [Investigation 1. Command Injection – High SIEM Alert](./01-Command-Injection/)
 **Type:** Web Application Attack Investigation  
 **Logs Analyzed:** Apache Access Logs  
-**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response
+**Skills Demonstrated:** Log Analysis, Command Injection Investigation
 
-### [7. XML External Entity (XXE) Log Analysis](./07-XML-External-Entity-XXE-Log-Analysis/)
-**Type:** Web Application Log Analysis  
-**Logs Analyzed:** Web Server & Application Logs  
-**Skills Demonstrated:** XML Payload Analysis, Exploit Detection, 
-Application Log Review
+### [Investigation 2. IDOR (Insecure Direct Object Reference) Log Analysis](./02-IDOR-Log-Analysis/)
+**Type:** Web Application Authorization Vulnerability Analysis  
+**Logs Analyzed:** Web Server Access Logs  
+**Skills Demonstrated:** Access Control Analysis, Authorization Bypass Detection
 
-### [6. Brute Force Attack Log Analysis](./06-brute-force-attack-log-analysis/)
-**Type:** Authentication Log Analysis  
-**Logs Analyzed:** Authentication & Web Server Access Logs  
-**Skills Demonstrated:** Brute Force Detection, Login Pattern Analysis, 
-HTTP Response Interpretation
+### [Investigation 3. LFI / RFI – SIEM Alert Investigation](./03-LFI-RFI-SIEM-Alert/)
+**Type:** SIEM Alert Triage & Validation  
+**Data Reviewed:** SIEM Alerts, Web Traffic  
+**Skills Demonstrated:** Alert Analysis, False Positive Validation
 
-### [5. Directory Traversal Log Analysis](./05-Directory-Traversal-Log-Analysis/)
+### [Investigation 4. Open Redirect Log Analysis](./04-Open-Redirect-Log-Analysis/)
+**Type:** Web Application Vulnerability Analysis  
+**Logs Analyzed:** Web Server Access Logs  
+**Skills Demonstrated:** Redirect Abuse Detection, Log Correlation
+
+### [Investigation 5. Directory Traversal Log Analysis](./05-Directory-Traversal-Log-Analysis/)
 **Type:** Web Attack Log Analysis  
 **Logs Analyzed:** Web Server Access Logs  
 **Skills Demonstrated:** Path Traversal Detection, HTTP Log Analysis, 
 Exploitation Validation
 
-### [4. Open Redirect Log Analysis](./04-Open-Redirect-Log-Analysis/)
-**Type:** Web Application Vulnerability Analysis  
-**Logs Analyzed:** Web Server Access Logs  
-**Skills Demonstrated:** Redirect Abuse Detection, Log Correlation
+### [Investigation 6. Brute Force Attack Log Analysis](./06-brute-force-attack-log-analysis/)
+**Type:** Authentication Log Analysis  
+**Logs Analyzed:** Authentication & Web Server Access Logs  
+**Skills Demonstrated:** Brute Force Detection, Login Pattern Analysis, 
+HTTP Response Interpretation
 
-### [3. LFI / RFI – SIEM Alert Investigation](./03-LFI-RFI-SIEM-Alert/)
-**Type:** SIEM Alert Triage & Validation  
-**Data Reviewed:** SIEM Alerts, Web Traffic  
-**Skills Demonstrated:** Alert Analysis, False Positive Validation
+### [Investigation 7. XML External Entity (XXE) Log Analysis](./07-XML-External-Entity-XXE-Log-Analysis/)
+**Type:** Web Application Log Analysis  
+**Logs Analyzed:** Web Server & Application Logs  
+**Skills Demonstrated:** XML Payload Analysis, Exploit Detection, 
+Application Log Review
 
-### [2. IDOR (Insecure Direct Object Reference) Log Analysis](./02-IDOR-Log-Analysis/)
-**Type:** Web Application Authorization Vulnerability Analysis  
-**Logs Analyzed:** Web Server Access Logs  
-**Skills Demonstrated:** Access Control Analysis, Authorization Bypass Detection
-
-### [1. Command Injection – High SIEM Alert](./01-Command-Injection/)
+### [Investigation 8. Cross-Site Scripting (XSS) Log Analysis](./08-XSS-Log-Analysis/)
 **Type:** Web Application Attack Investigation  
 **Logs Analyzed:** Apache Access Logs  
-**Skills Demonstrated:** Log Analysis, Command Injection Investigation
+**Skills Demonstrated:** Log Analysis, XSS Detection, Incident Response
+
+### [Investigation 9. SQL Injection (SQLi) – SIEM Alert Investigation](./09-SQL-Injection-SIEM-Alert/)
+**Type:** SIEM Alert Triage & Validation  
+**Data Reviewed:** SIEM Alerts, Apache Access Logs  
+**Skills Demonstrated:** Alert Analysis, SQL Injection Detection, Log Correlation
 
 ---
 
